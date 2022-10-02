@@ -37,10 +37,9 @@ export default function Home({ data }) {
         <p className={styles.description}>
           Candidatos a Presidência da República
         </p>
-        <p className={styles.description}>
-        % de urnas apuradas {pst}
-        </p>
-
+        <span className={styles.description2}>
+        Urnas Apuradas: {pst}%
+        </span>
         <div className={styles.grid}>
           {cand.map(item => (
             <div key={item.seq} className={styles.card}>
