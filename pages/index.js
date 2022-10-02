@@ -45,7 +45,7 @@ export default function Home({ data }) {
             <div key={item.seq} className={styles.card}>
               <h2>{item.pvap}%</h2>
               <p>{item.nm}</p>
-              <p>Votos apurados: {item.vap}</p>
+              <p>Votos apurados: <br /> {new Intl.NumberFormat('pt-BR').format(item.vap)}</p>
             </div>
           )
           )}
