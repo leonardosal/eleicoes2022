@@ -16,6 +16,11 @@ export async function getStaticProps(context) {
 
 export default function Home({ data }) {
   const { cand } = data;
+
+  setInterval(() => {
+    window.location.reload();
+   }, 10000)
+
   return (
     <div className={styles.container}>
       <Head>
