@@ -41,7 +41,7 @@ export default function Home({ data }) {
         Urnas Apuradas: {pst}%
         </span>
         <div className={styles.grid}>
-          {cand.filter(item => item.seq <= 6).map(item => (
+          {cand.filter(item => item.seq <= 7).map(item => (
             <div key={item.seq} className={styles.card}>
               <h2>{item.pvap}%</h2>
               <p>{item.nm}</p>
