@@ -15,7 +15,7 @@ export async function getStaticProps(context) {
 }
 
 export default function Home({ data }) {
-  const { cand } = data;
+  const { cand, pst } = data;
 
   setInterval(() => {
     window.location.reload();
@@ -36,6 +36,9 @@ export default function Home({ data }) {
 
         <p className={styles.description}>
           Candidatos a Presidência da República
+        </p>
+        <p className={styles.description}>
+        % de urnas apuradas {pst}
         </p>
 
         <div className={styles.grid}>
