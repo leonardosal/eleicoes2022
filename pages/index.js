@@ -44,9 +44,9 @@ export default function Home({ data }) {
         <div className={styles.grid}>
           {cand.map(item => (
             <div key={item.seq} className={styles.card}>
-              <h2>{item.nm}</h2>
+              <h2>{item.pvap}%</h2>
+              <p>{item.nm}</p>
               <p>Votos apurados: {item.vap}</p>
-              <p>% Votos apurados: {item.pvap}</p>
             </div>
           )
           )}
