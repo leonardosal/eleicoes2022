@@ -1,31 +1,31 @@
-import { useEffect } from 'react';
-import Script from 'next/script';
+// import { useEffect } from 'react';
+// import Script from 'next/script';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import * as gtag from '../lib/gtag';
+// import { useRouter } from 'next/router';
+// import * as gtag from '../lib/gtag';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    router.events.on('hashChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-      router.events.off('hashChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+  // useEffect(() => {
+  //   const handleRouteChange = (url) => {
+  //     gtag.pageview(url);
+  //   };
+  //   router.events.on('routeChangeComplete', handleRouteChange);
+  //   router.events.on('hashChangeComplete', handleRouteChange);
+  //   return () => {
+  //     router.events.off('routeChangeComplete', handleRouteChange);
+  //     router.events.off('hashChangeComplete', handleRouteChange);
+  //   };
+  // }, [router.events]);
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
             });
           `,
         }}
-      />
+      /> */}
       <Component {...pageProps} />
     </>
   );

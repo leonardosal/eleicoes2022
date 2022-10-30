@@ -114,9 +114,8 @@
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .map{
+    display: none;
   }
 }
 
@@ -131,4 +130,36 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.svg {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 615px;
+  min-height: 640px;
+}
+
+.land{
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
+}
+
+.blue {
+  fill:#0070f3
+}
+
+.red {
+  fill:#f30000
+}
+
+
+.content {
+  display: flex;
+}
+
+.content2{
+  text-align: center;
 }
