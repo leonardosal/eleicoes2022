@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [data, setData] = React.useState([]);
-  const [dataBR, setDataBR] = React.useState();
+  const [dataBR, setDataBR] = React.useState({ ht: '', cand: []});
   const request = async () => {
     const endpoints = [
       'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/am/am-c0001-e000545-r.json',
@@ -49,12 +49,15 @@ export default function Home() {
     const response = await axios.get(
       'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/br/br-c0001-e000545-r.json'
     );
+
     setDataBR(response.data);
   }
 
   React.useEffect(() => {
-    request();
-    requestBR();
+    setInterval(() => {
+      request();
+      requestBR();
+    }, 5000)
   }, []);
 
   React.useEffect(() => {
@@ -69,6 +72,12 @@ export default function Home() {
       }
     });
   }, [data]);
+
+
+  React.useEffect(()=>{
+    const audio = new Audio('/confirma.mp3');
+    audio.play();
+  },[dataBR.ht])
 
   return (
     <div className={styles.container}>
