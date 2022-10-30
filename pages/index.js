@@ -9,33 +9,33 @@ export default function Home() {
   const [dataBR, setDataBR] = React.useState();
   const request = async () => {
     const endpoints = [
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/am/am-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ro/ro-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ap/ap-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/pa/pa-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/to/to-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/rr/rr-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ac/ac-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/df/df-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/go/go-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/mt/mt-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ms/ms-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/mg/mg-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/es/es-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/rj/rj-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/sp/sp-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/pr/pr-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/rs/rs-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/sc/sc-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/se/se-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/rn/rn-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/al/al-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ba/ba-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ce/ce-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/ma/ma-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/pe/pe-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/pi/pi-c0001-e000544-r.json',
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/pb/pb-c0001-e000544-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/am/am-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ro/ro-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ap/ap-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/pa/pa-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/to/to-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/rr/rr-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ac/ac-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/df/df-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/go/go-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/mt/mt-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ms/ms-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/mg/mg-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/es/es-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/rj/rj-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/sp/sp-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/pr/pr-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/rs/rs-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/sc/sc-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/se/se-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/rn/rn-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/al/al-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ba/ba-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ce/ce-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/ma/ma-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/pe/pe-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/pi/pi-c0001-e000545-r.json',
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/pb/pb-c0001-e000545-r.json',
     ];
 
     const response = await axios.all(
@@ -47,7 +47,7 @@ export default function Home() {
 
   async function requestBR() {
     const response = await axios.get(
-      'https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544-r.json'
+      'https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/br/br-c0001-e000545-r.json'
     );
     setDataBR(response.data);
   }
